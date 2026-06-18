@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Qrange's site"
+title                    : "Qrange 的博客"
 title_separator          : "-"
 url                      : https://qrange.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,8 +80,8 @@ analytics:
 author:
   name             : "Yang Zhiyuan"
   avatar           : "white.png"
-  bio              : "Peking University"
-  location         : "China Beijing"
+  bio              : "北京大学 · 学习、笔记与写作整理"
+  location         : "中国，北京"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : #"http://yourfullgooglescholarurl.com"

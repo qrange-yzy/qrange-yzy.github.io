@@ -14,6 +14,11 @@ body {
   color: $text-color;
   font-family: $global-font-family;
   line-height: 1.5;
+  background:
+    radial-gradient(circle at top, rgba(214, 191, 166, 0.28), transparent 34%),
+    linear-gradient(180deg, #fffdf9 0%, $body-color 42%, $background-color 100%);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -26,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
+  letter-spacing: 0.01em;
 }
 
 h1 {
@@ -59,6 +65,7 @@ small, .small {
 
 p {
   margin-bottom: 1.3em;
+  font-size: 1.02rem;
 }
 
 u,
@@ -94,10 +101,12 @@ abbr[data-original-title] {
 
 blockquote {
   margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1.2em 1.4em;
   font-style: italic;
   border-left: 0.25em solid $primary-color;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 0 $border-radius $border-radius 0;
+  box-shadow: 0 10px 24px rgba(88, 62, 39, 0.06);
 
   cite {
     font-style: italic;
@@ -112,6 +121,10 @@ blockquote {
 /* links */
 
 a {
+  color: $link-color;
+  text-underline-offset: 0.16em;
+  text-decoration-thickness: 0.08em;
+
   &:focus {
     @extend %tab-focus;
   }
@@ -155,9 +168,14 @@ td > code {
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin: 1.5em 0;
   border: 0;
   border-top: 1px solid $border-color;
+}
+
+::selection {
+  color: #fff;
+  background: rgba($primary-color, 0.82);
 }
 
 /* lists */
@@ -319,73 +337,77 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
    ========================================================================== */
 
 @media (prefers-color-scheme: dark) {
-  /* 1. 基础背景和文字 */
   body {
-    background-color: #1a1a1a !important;
-    color: #e0e0e0 !important;
+    background:
+      radial-gradient(circle at top, rgba(156, 118, 86, 0.2), transparent 32%),
+      linear-gradient(180deg, #1e1814 0%, #181310 100%) !important;
+    color: #eadfce !important;
   }
 
-  /* 2. 链接颜色 (改亮一点，不然在黑底上看不清) */
   a {
-    color: #4da6ff !important;
+    color: #8fc9c9 !important;
   }
+
   a:hover {
-    color: #80bfff !important;
+    color: #b4e2dd !important;
   }
 
-  /* 3. 顶部导航栏 */
   .masthead {
-    background-color: #252525 !important;
-    border-bottom: 1px solid #333 !important;
+    background: rgba(24, 18, 14, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* 4. 左侧个人信息卡片 */
+  .page__inner-wrap,
   .author__profile {
-    background-color: #252525 !important;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
+    background: rgba(40, 31, 26, 0.82) !important;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24) !important;
   }
 
-  /* 5. 底部版权栏 */
   .page__footer {
-    background-color: #252525 !important;
-    color: #aaa !important;
-  }
-  .page__footer-copyright {
-    color: #aaa !important;
+    background-color: #201914 !important;
+    color: #c6b59f !important;
   }
 
-  /* 6. 列表卡片、提示框背景 */
+  .page__footer-copyright {
+    color: #c6b59f !important;
+  }
+
+  .home-panel,
+  .home-card,
+  .home-note,
   .archive__item-teaser, 
   .notice, 
   .notice--info, 
   .notice--warning, 
   .notice--danger, 
   .notice--success {
-    background-color: #333 !important;
-    color: #e0e0e0 !important;
+    background-color: rgba(49, 38, 32, 0.9) !important;
+    color: #eadfce !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* 7. 代码块背景变暗 */
   div.highlighter-rouge, 
   figure.highlight,
   code {
-    background-color: #2d2d2d !important;
-    color: #ccc !important;
-    border: 1px solid #444 !important;
+    background-color: #2a211d !important;
+    color: #e4d7c5 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
-  /* 8. 表格边框和背景 */
   table {
-    border-color: #444 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
   }
+
   th {
-    background-color: #333 !important;
+    background-color: #302520 !important;
     color: #fff !important;
   }
+
   td {
-    border-color: #444 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
   }
+
   tr:nth-child(even) {
-    background-color: #252525 !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
   }
 }
