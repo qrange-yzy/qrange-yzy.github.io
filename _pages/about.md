@@ -12,8 +12,8 @@ redirect_from:
 
 <section class="home-hero">
   <p class="home-hero__eyebrow">你好，欢迎来到我的数字书桌</p>
-  <h1 class="home-hero__title">杨智远的个人博客</h1>
-  <p class="home-hero__lead">这里主要记录课程笔记、阅读摘记、阶段性写作和一些仍在生长中的想法。它更像一册持续整理中的中文笔记本，而不是一页静态简历。</p>
+  <h1 class="home-hero__title">杨之远的个人博客</h1>
+  <p class="home-hero__lead">这里主要记录课程笔记、阅读摘记、阶段性写作和一些仍在生长中的想法。</p>
   <div class="home-hero__actions">
     <a class="btn btn--large" href="/Notes/">先看笔记</a>
     <a class="btn btn--info btn--large" href="/Blogs/">逛逛博客</a>
@@ -22,8 +22,7 @@ redirect_from:
 </section>
 
 <section class="home-panel home-panel--intro">
-  <p>我目前在北京学习和生活，感兴趣的话题主要围绕经济学、课程学习、知识整理与长期写作。这个站点会优先更新“能帮助以后自己回看”的内容，所以你会看到比较多的笔记、索引和半成品思考。</p>
-  <p>如果你是第一次来，推荐先从课程笔记和博客开始；如果你想快速了解我，可以直接看简历或常用链接。</p>
+  <p>我目前在北京大学学习。这个站点会优先更新“能帮助以后自己回看”的内容，所以你会看到比较多的笔记、索引和半成品思考。</p>
 </section>
 
 <section class="home-section">
